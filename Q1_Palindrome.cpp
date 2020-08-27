@@ -34,15 +34,34 @@ bool IsPalindrome(string str)
 	return true; 
 } 
 
+bool IsPalindrome(int num) 
+{ 
+    int rem,sum=0,temp=0;
+    while(num>0)    
+    {    
+    rem=num%10;    
+    sum=(sum*10)+rem;    
+    num=num/10;    
+    }    
+    if(temp==sum)
+    {    
+     return true;   
+    }
+    else    
+    {
+     return false;  
+    } 
+} 
+
 
 int main() 
 { 
-	string str1 = "DalDa"; 
+    int n = 567;
 
-	if (IsPalindrome(str1)) 
-		cout <<str1<< " is palindrome."<<endl; 
+	if (IsPalindrome(n)) 
+		cout <<n<< " is palindrome."<<endl; 
 	else
-		cout <<str1<< " is not palindrome."<<endl; 
+		cout <<n<< " is not palindrome."<<endl; 
 		
 	string str2 = "ABA"; 
 
